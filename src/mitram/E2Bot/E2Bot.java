@@ -16,10 +16,10 @@ public class E2Bot {
     public static String PREFIX = "]";
     public static void main(String[] args) throws LoginException{
 
-       String token = "NTIxODUwMDk1NjEyNzIzMjEx.XA8Ixg.5GjV66dQkIQJvynWzIlCCaALKrE";
+       String token = "NTIxODUwMDk1NjEyNzIzMjEx.XA8Ixg.5GjV66dQkIQJvynWzIlCCaALKrE"; 
 
         JDABuilder jda = JDABuilder.createDefault(token);
-        
+        //Bot settings
         jda.setStatus(OnlineStatus.DO_NOT_DISTURB);
         jda.setActivity(Activity.competing("]help"));
 
