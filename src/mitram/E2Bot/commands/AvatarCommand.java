@@ -22,15 +22,13 @@ public class AvatarCommand extends ListenerAdapter{
                 event.getChannel().sendMessageEmbeds(error.build()).queue();
             }else{
                 event.getMessage().getMentionedMembers();
-                event.getChannel().sendMessage("Test");
-                /*Member member = event.getGuild().getMemberById(args[1]);
-                String url = member.getId();
-                event.getChannel().sendMessage(url);*/
+                Member member = event.getGuild().getMemberById(args[1].replace("<@!", "").replace(">", ""));
+                event.getChannel().sendMessage(String.valueOf(member.getUser().getAvatarUrl())).queue(); //Works for now but there must be a better way 
             }
         }
     }
-
 }
+
 /*
 
 EmbedBuilder error = new EmbedBuilder()
